@@ -4,7 +4,7 @@ Mysql参数优化对于新手来讲，是比较难懂的东西，其实这个参
 
 [root@mycat002 ~]# cat /etc/my.cnf  
 
-```
+```shell
 [mysqld]
 datadir=/mysql/data
 socket=/mysql/sock/mysql.sock

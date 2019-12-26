@@ -2,7 +2,7 @@
 
 ## install
 
-```
+```shell
 #!/bin/bash
 lname=`hostname -s`
 yum install gcc mysql-devel net-snmp-devel curl curl-devel libxml2 libxml2-devel -y
@@ -41,7 +41,7 @@ yum -y install gcc gcc-c++ autoconf automake zlib zlib-devel openssl openssl-dev
 创建用户：
 useradd nginx -s /sbin/nologin -M
 下载nginx软件包并进入到目录中：
-wget http://nginx.org/download/nginx-1.9.15.tar.gz && tar xvf nginx-1.9.15.tar.gz && cd nginx-1.9.15
+wget <http://nginx.org/download/nginx-1.9.15.tar.gz> && tar xvf nginx-1.9.15.tar.gz && cd nginx-1.9.15
  编译：
 ./configure --prefix=/usr/local/product/nginx1.9.14 --user=www --group=www --with-http_ssl_module --with-http_v2_module --with-http_stub_status_module --with-pcre
 make && make install
@@ -54,7 +54,7 @@ ln -s /usr/local/product/nginx1.9.14 /usr/local/nginx    ==>创建软链接
 
 二、安装PHP
 下载PHP安装包：
-wget http://cn2.php.net/get/php-5.5.35.tar.gz/from/this/mirror  
+wget <http://cn2.php.net/get/php-5.5.35.tar.gz/from/this/mirror>  
 解压并编译：
 mv mirror php-5.5.35.tar.gz &&  
 tar xvf php-5.5.35.tar.gz && cd php-5.5.35
@@ -82,7 +82,7 @@ chown -R mysql.mysql /data/mysql
 安装cmake及依赖：
 yum install cmake gcc* ncurses-devel -y  
 下载MySQL安装包：
-wget http://dev.mysql.com/get/Downloads/MySQL-5.5/mysql-5.5.49.tar.gz
+wget <http://dev.mysql.com/get/Downloads/MySQL-5.5/mysql-5.5.49.tar.gz>
 编译安装MySQL：
 tar -xvf mysql-5.5.49.tar.gz && cd mysql-5.5.49
 cmake -DCMAKE_INSTALL_PREFIX=/usr/local/product/mysql5.5.49 -DDEFAULT_CHARSET=utf8 -DENABLED_LOCAL_INFILE=1 -DMYSQL_DATADIR=/data/mysql -DWITH_EXTRA_CHARSETS=all -DWITH_READLINE=1 -DWITH_INNOBASE_STORAGE_ENGINE=1 -DMYSQL_TCP_PORT=3306 -DDEFAULT_COLLATION=utf8_general_ci
@@ -168,7 +168,7 @@ location ~ ^(.+.php)(.*)$ {
 }
 编辑nginx.conf配置文件：  
 
-```
+```shell
 [root@zabbix conf]# cat nginx.conf
 user  nginx;
 worker_processes  1;
@@ -233,7 +233,7 @@ udp       0 0.0.0.0:68       880/dhclient
 
 七、web端配置zabbix  
 
-```
+```shell
 vim /data/web/zabbix.lifec.com/include/locales.inc.php
 #'zh_CN' => ['name' => _('Chinese (zh_CN)'), 'display' => false],
 'zh_CN' => ['name' => _('Chinese (zh_CN)'), 'display' => true],

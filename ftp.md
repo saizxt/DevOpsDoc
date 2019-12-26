@@ -6,7 +6,7 @@
 [2] 配置vsftpd.conf文件
 [root@localhost ~]# vi /etc/vsftpd/vsftpd.conf
 
-```
+```shell
 # Example config file /etc/vsftpd/vsftpd.conf  
 #  
 # The default compiled in settings are fairly paranoid. This sample file  
@@ -141,7 +141,7 @@ use_localtime=YES
 [4] 编辑user_list文件，允许cent用户访问FTP
 [root@localhost ~]# vi /etc/vsftpd/user_list  
 
-```
+```shell
 # vsftpd userlist
 # If userlist_deny=NO, only allow users in this file
 # If userlist_deny=YES (default), never allow users in this file, and
