@@ -1,6 +1,6 @@
 # KMS
 
-https://03k.org/kms.html
+[KMS](https://03k.org/kms.html)
 
 wmic os get caption
 slmgr /ipk xxxxx-xxxxx-xxxxx-xxxxx
